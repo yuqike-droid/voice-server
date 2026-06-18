@@ -1,0 +1,23 @@
+{
+  "name": "server-voice",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-specifier-resolution=node src/index.ts",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "coze-coding-dev-sdk": "^0.7.24",
+    "cors": "^2.8.5",
+    "express": "^4.22.1",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3"
+  }
+}
