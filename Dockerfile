@@ -2,15 +2,13 @@ FROM node:24-slim
 
 WORKDIR /app
 
-RUN npm install -g pnpm
-
 COPY package.json ./
-COPY tsconfig.json ./
 
-RUN pnpm config set onlyBuiltDependencies '[]' --location=project && pnpm install
+RUN npm install
 
 COPY src ./src
+COPY tsconfig.json ./
 
 EXPOSE 8080
 
-CMD ["pnpm", "run", "dev"]
+CMD ["npx", "tsx", "src/index.ts"]
